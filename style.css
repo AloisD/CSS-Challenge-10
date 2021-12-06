@@ -1,44 +1,56 @@
+:root {
+    --primary-color: blue;
+    --secondary-color: orange;
+    --button-bg-color: #26f784;;
+    --txt-color: black;
+    --base-font-size: 8pt;
+    --base-padding: 8px;
+    --base-margin: 8px;
+    --body-font: arial;
+    --title-font: Impact;
+}
+
+
 body {
     margin: 0;
-    font-family: arial;
-  }
-  
-  .navbar {
+    font-family: var(--body-font);
+}
+
+.navbar {
     display: flex;
-    background-color: #f7289a;
-    color: white;
-    padding: 16px;
-  }
-  
-  .container {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: calc(var(--base-padding) * 2);
+}
+
+.container {
     width: calc(100% - 32px);
     max-width: 800px;
     margin: auto;
-  }
-  
-  h1 {
-    color: #f7289a;
-    font-size: 24pt;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  p {
-    font-size: 16pt;
-    color: black;
-  }
-  
-  a:any-link {
-    color: white;
-    margin-left: 8px;
+}
+
+h1 {
+    color: var(--primary-color);
+    font-size: calc(var(--base-font-size)* 3 );
+    font-family: var(--title-font);
+}
+
+p {
+    font-size: calc(var(--base-font-size)* 2 );
+    color: var(--txt-color);
+}
+
+a:any-link {
+    color: var(--secondary-color);
+    margin-left: var(--base-margin);
     text-decoration: none;
-  }
-  
-  .btn {
-    background-color: #26f784;
-    color: black;
-    padding: 8px 16px;
+}
+
+.btn {
+    background-color: var(--button-bg-color);
+    color: var(--txt-color);
+    padding: var(--base-padding) calc(var(--base-padding) * 2);
     border-radius: 4px;
-    font-size: 16pt;
+    font-size: calc(var(--base-font-size)* 2 );
     cursor: pointer;
-  }
-  
+}
